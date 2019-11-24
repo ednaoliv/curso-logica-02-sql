@@ -36,6 +36,54 @@ SELECT
 FROM carros
 WHERE data_fabricacao IS NOT NULL;
 
+# OPERADORES RELACIONAIS
+# =  Igual
+# >  Maior
+# >= Maior Igual
+# <  Menor
+# <= Menor ou Igual
+# != Diferente 
+USE vendas;
+SELECT * FROM carros
+WHERE id!= 1;
+
+# Busca onde o nome comeca com Nes
+SELECT * FROM alimentos
+WHERE nome LIKE 'Nes%';
+
+# Busca onde o nome termina com Nes
+SELECT * FROM alimentos
+WHERE nome LIKE '%Nes';
+
+# Busca onde o nome contém em qualquer parte nes
+SELECT * FROM alimentos
+WHERE nome LIKE '%Nes%';
+
+# Apresentar a quantidade de caracteres da coluna 
+SELECT nome, LENGTH(nome) FROM alimentos;
+
+# Apresentar o nome em caixa alta
+SELECT UPPER(nome) FROM alimentos;
+
+# Apresentar o nome em caixa baixa
+SELECT LOWER(nome) FROM alimentos;
+
+#Substring -> serve para obter parcialmente o texto
+SELECT CONCAT(SUBSTRING(nome, 1, 10), '...') FROM alimentos;
+
+SELECT * FROM alimentos
+LIMIT 0, 2;
+
+SELECT * FROM alimentos
+LIMIT 2, 2;
+
+SELECT * FROM alimentos
+LIMIT 4, 2;
+
+
+
+
+
 
 
 
